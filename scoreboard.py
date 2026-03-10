@@ -45,3 +45,8 @@ class Scoreboard(Turtle):
         self.pendown()
         self.forward(600)  # Maydon uzunligi
         self.penup()
+
+    def game_over(self):
+        if self.r_score == 5 or  self.l_score == 5:
+            self.goto(0,0)
+            self.write('Game Over',align="center",font=("Courier",50,"normal"))

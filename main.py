@@ -14,10 +14,10 @@ l_paddle=Paddle((-350,0))
 ball=Ball()
 score=Scoreboard()
 screen.listen()
-screen.onkey(r_paddle.up,"Up")
-screen.onkey(r_paddle.down,"Down")
-screen.onkey(l_paddle.up,"w")
-screen.onkey(l_paddle.down,"s")
+screen.onkeypress(r_paddle.up,"Up")
+screen.onkeypress(r_paddle.down,"Down")
+screen.onkeypress(l_paddle.up,"n")
+screen.onkeypress(l_paddle.down,"s")
 game_is_on=True
 while game_is_on:
     time.sleep(ball.move_speed)
@@ -33,4 +33,7 @@ while game_is_on:
     if ball.xcor()<-380:
         ball.reset_position()
         score.r_point()
+    if score.game_over():
+        break
+
 screen.exitonclick()
