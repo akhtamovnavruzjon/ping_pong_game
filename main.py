@@ -1,8 +1,7 @@
-
-import time
 from turtle import Screen
-from paddle import Paddle
 from ball import Ball
+from paddle import Paddle
+import time
 from scoreboard import Scoreboard
 screen=Screen()
 screen.title("Ping Pong Game")
