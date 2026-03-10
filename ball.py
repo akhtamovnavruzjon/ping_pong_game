@@ -4,7 +4,7 @@ from turtle import Turtle
 class Ball(Turtle):
     def __init__(self):
         super(Ball,self).__init__()
-        self.color("white")
+        self.color("red")
         self.shape("circle")
         self.penup()
         self.x_move=10
